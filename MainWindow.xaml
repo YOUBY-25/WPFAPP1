@@ -1,0 +1,47 @@
+﻿<Window x:Class="EmployeeApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Employee App" Height="300" Width="400">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Last Name:"/>
+        <TextBox x:Name="LastNameBox" Grid.Row="0" Margin="120,0,0,5"/>
+
+        <TextBlock Grid.Row="1" Text="Salary:"/>
+        <TextBox x:Name="SalaryBox"
+                 Grid.Row="1"
+                 Margin="120,0,0,5"
+                 PreviewTextInput="NumberValidation"
+                 PreviewKeyDown="BlockSpace"/>
+
+        <TextBlock Grid.Row="2" Text="Year of Employment:"/>
+        <TextBox x:Name="YearBox"
+                 Grid.Row="2"
+                 Margin="120,0,0,5"
+                 PreviewTextInput="NumberValidation"
+                 PreviewKeyDown="BlockSpace"/>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,10,0,10">
+            <Button Content="Calculate Experience"
+                    Width="180"
+                    Click="CalcExperience_Click"/>
+            <Button Content="Days Worked"
+                    Width="120"
+                    Margin="10,0,0,0"
+                    Click="CalcDays_Click"/>
+        </StackPanel>
+
+        <TextBlock x:Name="ResultText"
+                   Grid.Row="4"
+                   FontSize="14"
+                   TextWrapping="Wrap"/>
+    </Grid>
+</Window>
