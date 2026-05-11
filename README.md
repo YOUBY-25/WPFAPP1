@@ -9,9 +9,7 @@ This is a **WPF (Windows Presentation Foundation)** application built using **C#
 3. [Prerequisites](#prerequisites)
 4. [Installation](#installation)
 5. [Usage](#usage)
-6. [Screenshots](#screenshots)
-7. [Contributing](#contributing)
-8. [License](#license)
+
 
 ## Overview
 
